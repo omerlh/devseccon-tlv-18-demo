@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  api:
+    build: 'api/'
+    environment: 
+      - ROCKET_ENV=prod
+  black-box:
+    build: 'tests/'
+    environment: 
+      - API_URI=http://api:80
+      - http_proxy=http://zap:8090
+      - https_proxy=http://zap:8090

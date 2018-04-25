@@ -1,0 +1,5 @@
+{
+  "ZAPhttp://api/X-Content-Type-Options Header MissingX-Content-Type-Options": "new",
+  "ZAPhttp://api/Base64 Disclosure": "new",
+  "ZAPhttp://api/Storable and Cacheable Content": "new"
+}
