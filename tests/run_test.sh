@@ -6,7 +6,7 @@ set -x
 
 function run_tests()
 {
-  rspec test.rb
+  dotnet test
 }
 
 PROXY_URL=$http_proxy

@@ -5,9 +5,13 @@ services:
     build: 'api/'
     environment: 
       - ROCKET_ENV=prod
+    ports:
+      - 8081:80
   black-box:
     build: 'tests/'
     environment: 
       - API_URI=http://api:80
       - http_proxy=http://zap:8090
       - https_proxy=http://zap:8090
+      - no_proxy=api.nuget.org
+      - TEAMCITY_PROJECT_NAME=awesome-api
