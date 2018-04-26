@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose -f docker-compose.yaml -f $api_file -f docker-compose.security.yaml down
+docker-compose -f docker-compose.yaml -f docker-compose.security.yaml down
