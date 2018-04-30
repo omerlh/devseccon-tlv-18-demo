@@ -16,7 +16,7 @@ then
   echo PROXY_URL is not set, not running security checks
   run_tests
 else
-  ls -la
+  
   ZAP_URL=$(echo $PROXY_URL | sed -e 's/https\?:\/\///')
   ./wait-for-it.sh $ZAP_URL -t 300
   echo "ZAP is ready"

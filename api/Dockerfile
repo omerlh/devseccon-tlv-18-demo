@@ -1,23 +1,10 @@
-#Source: https://whitfin.io/speeding-up-rust-docker-builds/
+FROM python
 
-FROM rustlang/rust:nightly
+RUN apt-get update && apt-get install -y git cmake && cd /tmp && git clone https://github.com/justinmeza/lci.git && cd lci && git checkout future 
+RUN cd /tmp/lci && chmod +x install.py && ./install.py
 
-WORKDIR /usr/src
+WORKDIR /app
 
-RUN USER=root cargo new app
+COPY . /app
 
-WORKDIR /usr/src/app
-
-COPY Cargo.toml .
-
-RUN cargo build --release
-
-RUN rm src/*.rs
-
-COPY ./src ./src
-
-RUN cargo build --release \
-    && mv target/release/app /bin \
-    && rm -rf /usr/src/app
-
-CMD ["/bin/app"]
+CMD lci httpd.lol

@@ -3,12 +3,10 @@ version: '3'
 services:
   api:
     build: 'api/'
-    environment: 
-      - ROCKET_ENV=prod
   black-box:
     build: 'tests/'
     environment: 
-      - API_URI=http://api:80
+      - API_URI=http://api:13337/lol.html
       - http_proxy=http://zap:8090
       - https_proxy=http://zap:8090
       - no_proxy=api.nuget.org

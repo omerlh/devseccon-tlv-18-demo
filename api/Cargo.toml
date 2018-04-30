@@ -1,9 +1,0 @@
-[package]
-name = "app"
-version = "0.1.0"
-authors = ["Your Name <you@example.com>"]
-
-[dependencies]
-rocket = "0.3.8"
-rocket_codegen = "0.3.8"
-rocket_contrib = "0.3.8"
