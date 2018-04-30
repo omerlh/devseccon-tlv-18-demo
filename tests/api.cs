@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -11,6 +12,7 @@ namespace tests
         public async void Return_All_Open_Positions()
         {
           var client = new HttpClient();
+         // client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "read");
           var url = Environment.GetEnvironmentVariable("API_URI");
           var response = await client.GetAsync(url);
           response.EnsureSuccessStatusCode();
