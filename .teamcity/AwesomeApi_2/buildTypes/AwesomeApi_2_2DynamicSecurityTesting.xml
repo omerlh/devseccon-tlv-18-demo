@@ -3,6 +3,9 @@
   <name>2. Dynamic Security Testing</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="glue/api.txt" />
+    </options>
     <parameters />
     <build-runners order="RUNNER_1">
       <runner id="RUNNER_1" name="" type="simpleRunner">
