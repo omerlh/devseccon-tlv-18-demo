@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="51d61837-30b9-4ca6-8184-7544d00ad55c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>1. Black Box Tests</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="zap/session =&gt; zap.zip" />
+      <option name="cleanBuild" value="true" />
+    </options>
+    <parameters />
+    <build-runners order="RUNNER_1, RUNNER_2">
+      <runner id="RUNNER_1" name="" type="simpleRunner">
+        <parameters>
+          <param name="command.executable" value="./scripts/run_tests.sh" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_2" name="" type="simpleRunner">
+        <parameters>
+          <param name="command.executable" value="./scripts/teardown_tests.sh" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="AwesomeApi_2_GitLocalhostRootAwesomeApiGit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="TRIGGER_1" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <cleanup />
+  </settings>
+</build-type>
+
