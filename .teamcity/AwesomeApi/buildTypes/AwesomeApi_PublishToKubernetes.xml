@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="691e7dd4-35f9-4d24-b2f5-4095200853ed" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>Publish to Kubernetes</name>
+  <description />
+  <settings>
+    <options>
+      <option name="buildConfigurationType" value="COMPOSITE" />
+      <option name="showDependenciesChanges" value="true" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="AwesomeApi_Build">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="AwesomeApi_2DynamicSecurityTesting">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="AwesomeApi_3Publish">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
