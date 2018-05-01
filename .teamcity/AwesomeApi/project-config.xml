@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1f70a969-d759-4191-84da-79715ce0a80b" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>Awesome Api</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_6" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="PREFER_VCS" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="AwesomeApi_GitLocalhostRootAwesomeApiGit" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
