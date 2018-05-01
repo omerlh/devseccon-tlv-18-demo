@@ -1,8 +1,0 @@
-{
-  "ZAPhttp://api:13337/lol.htmlResource Allows Anonymous Access": "ignore",
-  "ZAPhttp://api:13337/lol.htmlContent-Type Header Missing": "ignore",
-  "ZAPhttp://api:13337/lol.htmlX-Content-Type-Options Header MissingX-Content-Type-Options": "ignore",
-  "ZAPhttp://api:13337/lol.htmlBase64 Disclosure": "ignore",
-  "ZAPhttp://api:13337/lol.htmlStorable and Cacheable Content": "ignore",
-  "ZAPhttp://api:13337/lol.htmlServer Leaks Version Information via \"Server\" HTTP Response Header Field": "ignore"
-}
