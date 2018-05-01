@@ -19,8 +19,7 @@
       <runner id="RUNNER_2" name="" type="simpleRunner">
         <parameters>
           <param name="command.executable" value="./scripts/teardown_tests.sh" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="" />
+          <param name="teamcity.step.mode" value="execute_always" />
         </parameters>
       </runner>
     </build-runners>
