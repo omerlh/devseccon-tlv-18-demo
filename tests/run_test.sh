@@ -26,7 +26,7 @@ else
   curl -s --fail $PROXY_URL/JSON/core/action/clearExcludedFromProxy
 
   # Add the rules you wish to ignore on this line, after the ids query param.
-  # curl -s --fail $PROXY_URL/JSON/pscan/action/disableScanners/?ids=
+  curl -s --fail $PROXY_URL/JSON/pscan/action/disableScanners/?ids=10019,10049,10021
 
   # Add the URLs you wish to ignore on this line, after the regex query param - regex supported.
   # curl -s --fail $PROXY_URL/JSON/core/action/excludeFromProxy/?regex=
