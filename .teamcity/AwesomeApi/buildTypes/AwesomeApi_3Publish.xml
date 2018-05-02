@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8fd3f147-fbb5-4254-aee5-a3ffbf10c5a5" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2017.2/project-config.xsd">
+  <name>3. Publish</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners order="RUNNER_3">
+      <runner id="RUNNER_3" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="sleep 3" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="AwesomeApi_2DynamicSecurityTesting">
+        <options>
+          <option name="take-started-build-with-same-revisions" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
